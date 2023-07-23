@@ -28,10 +28,11 @@ const GridLayout = ({
     console.log("NEW LAYOUT", newLayout, breakpointa);
     // console.log("old old", old);
     // if (breakpoint === "lg")
-    if (breakpoint !== undefined) addNewLayouts(breakpointa, newLayout);
-    // layouts[breakpoint] = newLayout;
+    // addNewLayouts(breakpoint, newLayout);
+    layouts[breakpoint] = newLayout;
   };
 
+  console.log("LAYOUT NANANA", layouts);
   return (
     <React.Fragment>
       <button
@@ -45,7 +46,7 @@ const GridLayout = ({
           console.log("LAYOUTS", layouts);
           addNewLayouts(
             breakpointa,
-            layouts[breakpointa].concat({
+            layouts[breakpoint].concat({
               i: `graph${data.length + 1}`,
               x: 0,
               y: 0,
